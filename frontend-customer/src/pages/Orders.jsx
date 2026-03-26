@@ -52,7 +52,7 @@ const Orders = () => {
 
   useEffect(() => {
     fetchOrders(false);
-    const timer = setInterval(() => fetchOrders(true), 15000);
+    const timer = setInterval(() => fetchOrders(true), 18000);
     return () => clearInterval(timer);
   }, [fetchOrders]);
 

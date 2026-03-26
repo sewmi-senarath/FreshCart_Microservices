@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = import.meta.env.VITE_ORDER_SERVICE_URL || 'http://localhost:5004/api';
+const BASE_URL = import.meta.env.VITE_ORDER_SERVICE_URL || 'http://localhost:8004/api';
 
 const orderAxios = axios.create({ baseURL: BASE_URL });
 

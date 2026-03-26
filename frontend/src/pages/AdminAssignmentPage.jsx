@@ -107,7 +107,7 @@
 //                               marginBottom:6, textTransform:'uppercase', letterSpacing:0.5 }}>
 //                 Interval (ms)
 //               </label>
-//               <input type="number" value={intervalMs} min={5000} step={5000}
+//               <input type="number" value={intervalMs} min={8000} step={8000}
 //                 onChange={e => setIntervalMs(Number(e.target.value))}
 //                 style={{ width:'100%', padding:'10px 14px', borderRadius:10, fontSize:14,
 //                          border:'1.5px solid #d1fae5', outline:'none', background:'#f9fafb',
@@ -485,7 +485,7 @@ export default function AdminAssignmentPage() {
               </div>
               <label style={{ display:'block', fontSize:10, fontWeight:700, color:'#374151',
                               marginBottom:5, textTransform:'uppercase', letterSpacing:0.5 }}>Interval (ms)</label>
-              <input type="number" value={intervalMs} min={5000} step={5000}
+              <input type="number" value={intervalMs} min={8000} step={8000}
                 onChange={e => setIntervalMs(Number(e.target.value))}
                 style={{ width:'100%', padding:'9px 12px', borderRadius:10, fontSize:14,
                          border:'1.5px solid #d1fae5', outline:'none', background:'#f9fafb',

@@ -25,7 +25,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.options(/.*/, cors(corsOptions));
-console.log("ALLOWED ORIGINS:", allowedOrigins);
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -47,7 +46,7 @@ app.get('/', (req, res) => {
 routes(app);
 
 
-const PORT = process.env.PORT || 5003
+const PORT = process.env.PORT || 8003
 if (!process.env.VERCEL) {
     app.listen(PORT,() => {
         console.log(`Listening on PORT ${PORT} : http://localhost:${PORT}`);

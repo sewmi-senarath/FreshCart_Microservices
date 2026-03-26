@@ -4,10 +4,10 @@ services:
     build: 
       context: ./Grocery_Store_Management/backend/src
       args:
-        - PORT=5000
+        - PORT=8000
     container_name: grocery-store-backend
     ports:
-      - "5000:5000"
+      - "8000:8000"
     env_file:
       - ./Grocery_Store_Management/backend/src/.env
     restart: unless-stopped
@@ -19,7 +19,7 @@ services:
     build: ./User_Management_and_Payment_Service/backend
     container_name: user-payment-service
     ports:
-      - "5003:5003"
+      - "8003:8003"
     env_file:
       - ./User_Management_and_Payment_Service/backend/.env
     volumes:
@@ -45,7 +45,7 @@ services:
     build: ./Order_and_Notification_Management/backend
     container_name: order-service
     ports:
-      - "5004:5004"
+      - "8004:8004"
     env_file:
       - ./Order_and_Notification_Management/backend/.env
     restart: unless-stopped
@@ -56,11 +56,11 @@ services:
     build: 
       context: ./frontend
       args:
-        - VITE_API_URL=http://localhost:5000/api
-        - VITE_API_URL_ORDER=http://localhost:5004/api
+        - VITE_API_URL=http://localhost:8000/api
+        - VITE_API_URL_ORDER=http://localhost:8004/api
     container_name: admin-dashboard
     ports:
-      - "5173:80"
+      - "8173:80"
     restart: unless-stopped
     networks:
       - grocery-network
@@ -70,12 +70,12 @@ services:
     build: 
       context: ./frontend-customer
       args:
-        - VITE_API_URL=http://localhost:5003/api
-        - VITE_API_URL_GROCERY_MANAGEMENT_SERVICE=http://localhost:5000/api
+        - VITE_API_URL=http://localhost:8003/api
+        - VITE_API_URL_GROCERY_MANAGEMENT_SERVICE=http://localhost:8000/api
         - VITE_STRIPE_PUBLISHABLE_KEY=pk_test_51T8FA0CHMdOpXSyUdEp5T6KaDuOecXRk4IfE8Hqf15trW1kIOaXW0iyMvYOXJ7UhKyLYKXv1kInx2VQxXgiav2aU00tsvkgszS
     container_name: customer-app
     ports:
-      - "5174:80"
+      - "8174:80"
     restart: unless-stopped
     networks:
       - grocery-network

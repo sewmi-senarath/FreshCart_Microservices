@@ -12,7 +12,7 @@ export function SocketProvider({ children, driverId }) {
   const [newAssignment, setNewAssignment] = useState(null);
 
   useEffect(() => {
-    const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:5005';
+    const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:8005';
     socketRef.current = io(SOCKET_URL, { autoConnect: true });
 
     const socket = socketRef.current;

@@ -6,8 +6,8 @@ const axios = require("axios");
 const User = require("../models/UserModel");
 
 const GROCERY_SERVICE_URL = process.env.GROCERY_SERVICE_URL || process.env['grocery-service-url'] || 'https://grocery-backend.livelyforest-bef090db.eastus.azurecontainerapps.io/api';
-const ORDER_SERVICE_URL = process.env.ORDER_SERVICE_URL || process.env['order-service-url'] || 'http://localhost:5004/api';
-const FRONTEND_URL = process.env.FRONTEND_URL || process.env['frontend-url'] || 'http://localhost:5174';
+const ORDER_SERVICE_URL = process.env.ORDER_SERVICE_URL || process.env['order-service-url'] || 'http://localhost:8004/api';
+const FRONTEND_URL = process.env.FRONTEND_URL || process.env['frontend-url'] || 'http://localhost:8174';
 
 const paymentStripe = async (req, res) => {
   try {

@@ -30,7 +30,7 @@ app.use('/api/orders', orderRoutes);
 // Health check
 app.get('/', (_req, res) => res.json({ service: 'Order & Notification Management', status: 'running' }));
 
-const PORT = process.env.PORT || 5004;
+const PORT = process.env.PORT || 8004;
 if (!process.env.VERCEL) {
   app.listen(PORT, () => {
     console.log(`Listening on PORT ${PORT} : http://localhost:${PORT}`);

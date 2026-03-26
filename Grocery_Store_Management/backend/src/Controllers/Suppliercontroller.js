@@ -169,7 +169,7 @@ const approveSupplier = async (req, res) => {
       await sendSupplierApprovalEmail({
         to: supplier.email, supplierName: supplier.contactPersonName,
         username: supplier.username, password: plainPassword,
-        roleName: role.name, portalUrl: process.env.FRONTEND_URL || 'http://localhost:5173',
+        roleName: role.name, portalUrl: process.env.FRONTEND_URL || 'http://localhost:8173',
       });
     } catch (mailErr) { console.error('Email send failed:', mailErr.message); }
 

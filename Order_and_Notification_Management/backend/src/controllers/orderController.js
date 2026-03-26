@@ -117,10 +117,10 @@ const updateOrderStatus = async (req, res) => {
       const userMgmtStatus = statusMap[status] || status;
       
       console.log(`[DEBUG] Syncing order ${order.orderId} to status: ${userMgmtStatus}`);
-      console.log(`[DEBUG] Target URL: http://localhost:5003/api/admin/orders/status/${order.orderId}`);
+      console.log(`[DEBUG] Target URL: http://localhost:8003/api/admin/orders/status/${order.orderId}`);
 
       // order.orderId is the _id in the User_Management database
-      const syncRes = await axios.patch(`http://localhost:5003/api/admin/orders/status/${order.orderId}`, 
+      const syncRes = await axios.patch(`http://localhost:8003/api/admin/orders/status/${order.orderId}`, 
         { status: userMgmtStatus },
         { headers: { Authorization: req.headers.authorization } }
       );

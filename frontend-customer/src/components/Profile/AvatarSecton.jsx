@@ -11,7 +11,7 @@ const toAbsoluteAvatarUrl = (value) => {
   ) {
     return value;
   }
-  const base = import.meta.env.VITE_USER_SERVICE_ORIGIN || "http://localhost:5003";
+  const base = import.meta.env.VITE_USER_SERVICE_ORIGIN || "http://localhost:8003";
   return `${base}${value.startsWith("/") ? "" : "/"}${value}`;
 };
 

@@ -17,7 +17,7 @@ const options = {
     },
     servers: [
       {
-        url: 'http://localhost:5003',     
+        url: 'http://localhost:8003',     
         description: 'Development server'
       }
     ],
@@ -42,7 +42,7 @@ const options = {
 
 const specs = swaggerJsDoc(options);
 // console.log('Swagger discovered paths:', Object.keys(specs.paths || {}));
-console.log('Swagger api-endpoint: http://localhost:5003/api-docs');
+console.log('Swagger api-endpoint: http://localhost:8003/api-docs');
 
 module.exports = (app) => {
     app.use('/api/auth', authRoutes);

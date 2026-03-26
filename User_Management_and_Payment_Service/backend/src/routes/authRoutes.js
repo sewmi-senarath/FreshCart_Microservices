@@ -3,7 +3,7 @@ const authRouter = express.Router();
 const passport = require('passport');
 const user = require('../controllers/authController');
 
-//http://localhost:5003/api/auth/register
+//http://localhost:8003/api/auth/register
 /**
  * @swagger
  * /api/auth/register:
@@ -58,7 +58,7 @@ const user = require('../controllers/authController');
  */
 authRouter.post('/register' , user.registerNewUser);
 
-//http://localhost:5003/api/auth/login
+//http://localhost:8003/api/auth/login
 /**
  * @swagger
  * /api/auth/login:
@@ -94,7 +94,7 @@ authRouter.post('/register' , user.registerNewUser);
 authRouter.post('/login', user.userLogin);
 
 // Google OAuth: Start
-//http://localhost:5003/api/auth/google
+//http://localhost:8003/api/auth/google
 /**
  * @swagger
  * /api/auth/google:
@@ -114,7 +114,7 @@ authRouter.get(
 );
 
 // Google OAuth: Callback
-//http://localhost:5003/api/auth/google/callback
+//http://localhost:8003/api/auth/google/callback
 /**
  * @swagger
  * /api/auth/google/callback:
@@ -136,7 +136,7 @@ authRouter.get(
     user.googleCallback 
 );
 
-//http://localhost:5003/api/auth/forgot-password
+//http://localhost:8003/api/auth/forgot-password
 /**
  * @swagger
  * /api/auth/forgot-password:
@@ -168,7 +168,7 @@ authRouter.get(
  */
 authRouter.post('/forgot-password', user.forgotAppPassword);
 
-//http://localhost:5003/api/auth/reset-password
+//http://localhost:8003/api/auth/reset-password
 /**
  * @swagger
  * /api/auth/reset-password:
